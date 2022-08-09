@@ -1,5 +1,5 @@
 #  使用vue搭建一个简单的电影购票项目
-
+#  使用npm i 下载依赖
 ##  划分组件
 
 ![image-20220706103150914](/Users/lhl/Library/Application Support/typora-user-images/image-20220706103150914.png)
