@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style-type: none;
+    }
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    .video-header-wrapper{
+        width: 400px;
+        height: 249px;
+        background:no-repeat 50%/cover url("https://gw.alicdn.com/i2/O1CN01oepU6m1LFhldYQruh_!!6000000001270-0-alipicbeacon.jpg_760x760Q30.jpg_.webp") ;
+    }
+  /*  电影详情*/
+    .show-info-d{
+        width: 374px;
+        height: 144px;
+        padding: 12px 12px 0 12px;
+        margin-bottom: 12px;
+    }
+    .poster-wrap{
+        position: relative;
+        margin-right: 6px;
+    }
+    .poster-wrap .poster{
+        width: 103px;
+        height: 144px;
+        background: url("https://gw.alicdn.com/i3/O1CN01CiuZKy1I5Dr6LcJuu_!!6000000000841-0-alipicbeacon.jpg_320x320Q30s100.jpg_.webp") no-repeat 50%/cover;
+    }
+    .poster-wrap .force-oneline{
+        position: absolute;
+        top: 0;
+        left: 4px;
+    }
+    .poster-wrap,.info-container{
+        float: left;
+    }
+    .poster-wrap .force-oneline i{
+
+        color: #000;
+        background: #f8f8fb;
+        font-size: 10px;
+        font-weight: 400;
+        border-radius: 3px;
+        white-space: nowrap;
+        /*取消斜体  */
+        font-style: normal;
+    }
+    .info-container{
+        width: 258px;
+        height: 91px;
+        /*background: red;*/
+    }
+    .info-container .movie-name{
+        padding:4px 0;
+        padding-bottom: 0;
+    }
+    .info-container .chinese{
+        color: #2e333e;
+        font-size:22px;
+        font-weight: 500;
+    }
+    .info-container .movie-detail{
+        padding: 8px 0;
+        padding-bottom: 0;
+    }
+    .movie-detail .show-intro,.movie-detail .open-date-and-issuance{
+        color:#959aa5;
+        font-size: 13px;
+    }
+    .movie-detail .show-intro{
+      margin-bottom: 4px;
+    }
+    .open-date,.bui-tag{
+        float: left;
+    }
+    .open-date{
+        /*margin-left:1px;*/
+        width: 196px;
+        /*内容在一行显示*/
+        white-space: nowrap;
+        overflow: hidden;
+        /* 多出来的内容使用省略号代替*/
+        text-overflow: ellipsis;
+    }
+    .bui-tag{
+
+        border: 1px solid rgba(44,199,164,.4);
+        padding: 0 4px;
+        border-radius: 3px;
+        color: #2cc7a4;
+        /*border-color: rgba(44,199,164,.4);*/
+    }
+  /*  k口碑*/
+    .show-remark{
+        width: 374px;
+        height: 47px;
+        margin: 12px;
+    }
+    .show-remark .remark-wrapper{
+        height: 24px;
+        padding: 10px 16px;
+        border: 1px solid #e9ebef;
+        border-radius: 12px;
+
+    }
+    .show-remark .remark-head{
+        font-size: 16px;
+
+    }
+    .show-remark .remark-title{
+        margin-top: 5px;
+        width: 85px;
+        height: 14px;
+        text-align: center;
+        background: url("https://img.alicdn.com/tfs/TB15abfvWL7gK0jSZFBXXXZZpXa-174-33.png");
+        /*background-color: red;*/
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .show-remark .remark-head span{
+        float: left;
+    }
+    .show-remark .want-see-num{
+        margin-left: 143px;
+        font-size: 16px;
+        color: #ff901c;
+    }
+    /*背景条*/
+    .margin-area{
+        width: 100%;
+        height:10px;
+        background-color: #f5f6f8;
+    }
+    /*电影简介*/
+    .tab-wrapper{
+        width: 400px;
+        height:51px;
+    }
+    .tab-container li{
+        float: left;
+        width: 130px;
+        height: 17px;
+        padding: 16px 0;
+        text-align: center;
+        font-size: 16px;
+        line-height: 17px;
+        color: #4a4a4a;
+    }
+    .tab-li-active{
+        font-weight: 600;
+        border-bottom: 1px solid #2e333e;
+    }
+    .tab-container .sub-info{
+        display: block;
+        position:absolute;
+        top: -3px;
+        left: 20px;
+        right: -39px;
+        width: 37px;
+        height: 17px;
+        font-size:10px;
+        color:#959aa5;
+        font-weight: 400;
+    }
+  /*  电影简介*/
+    .show-desc{
+        width: 374px;
+        height: 164px;
+
+        padding-top: 12px;
+        overflow: hidden;
+        font-size: 15px;
+        background-color: #fff;
+    }
+    .show-desc .show-desc-content{
+        margin: 0 12px;
+        margin-bottom: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .seg-line{
+        position: relative;
+        height:1px;
+        background: #fff;
+    }
+    .seg-line::after{
+        position: absolute;
+        left: 12px;
+        top: 0;
+        content:"";
+        width: 100%;
+        height:1px;
+        background:transparent linear-gradient(0deg,#ededed,#ededed 50%,transparent 0,transparent 0) 0 100% repeat-x;
+    }
+  /*  演员列表*/
+    .show-artists{
+        height: 251px;
+    }
+    .show-artists .show-mod-title{
+        height: 57px;
+    }
+    .show-artists .show-mod-title h3,.show-artists .show-mod-title .more-num{
+        float: left;
+    }
+    .show-artists .show-mod-title h3{
+        width: 72px;
+        height: 40px;
+        padding: 8px 0;
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .show-artists .show-mod-title .more-num{
+        margin-left: 267px;
+        margin-top: 8px;
+        /*line-height: 57px;*/
+    }
+    .show-artists .show-artists-container{
+
+    }
+  </style>
+</head>
+<body>
+<script src="../public/iconfont.js"></script>
+<!--电影播放视频-->
+  <section class="video-header-wrapper"></section>
+<!--电影详情-->
+  <div class="show-info-d">
+<!--    封面-->
+    <div class="poster-wrap">
+      <div class="poster"></div>
+      <span class="force-oneline">
+        <i>2D IMAX</i>
+      </span>
+    </div>
+<!--    详情-->
+    <div class="info-container">
+      <div class="movie-name">
+        <p class="chinese">
+          <span>外太空的莫扎特</span>
+        </p>
+      </div>
+      <div class="movie-detail">
+        <p class="show-intro">136分钟 / 家庭 / 奇幻 / 喜剧 / 中国大陆</p>
+        <div class="open-date-and-issuance">
+          <div class="open-date">2022-07-15 17:00 在中国大陆上映</div>
+          <div class="bui-tag">发型通知</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  口碑-->
+  <section class="show-remark">
+    <div class="remark-wrapper">
+      <div class="remark-container">
+        <h3 class="remark-head">
+          <span class="remark-title"></span>
+          <span class="want-see-num">
+            <span class="J_WantCount">187,433</span>
+            <span class="want-see-text"> &nbsp;人想看</span>
+          </span>
+        </h3>
+      </div>
+    </div>
+  </section>
+<!--  背景条-->
+  <div class="margin-area"></div>
+<!--电影详情导航栏-->
+  <section class="tab-wrapper">
+    <ul class="tab-container">
+      <li class="tab-item tab-li-active">简介</li>
+      <li class="tab-item">
+        <span style="position: relative">
+          影评
+          <span class="sub-info">28</span>
+        </span>
+      </li>
+      <li class="tab-item">更多</li>
+    </ul>
+  </section>
+<!--电影简介-->
+  <div class="show-desc">
+    <div class="show-desc-content">
+      你有没有遇到过一个人，他点亮了你整个青春？大四女孩童知了（周依然饰）喜欢了来自台北的校友顾彬（吴念轩饰）整整四年。她闯入他的世界，他带她感受青春里的肆意和热烈，惊艳了她整个青春。毕业临近，她是选择将秘密留在青春里还是勇敢说出那句“我一直一直都很喜欢你”呢？
+    </div>
+    <div class="seg-line"></div>
+
+  </div>
+<!--演员列表-->
+  <div class="show-artists">
+    <div class="show-mod-title">
+      <h3>演职人员</h3>
+      <div class="more-num">
+        38
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-you"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="show-artists-container">
+
+    </div>
+  </div>
+</body>
+</html>

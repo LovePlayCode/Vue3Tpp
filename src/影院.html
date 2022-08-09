@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/font/iconfont.css">
+  <title>Title</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background:#f5f6f8;
+    }
+    .clearfix:after{
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    li{
+        list-style-type: none;
+    }
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+      /*头部区域*/
+    .topbar{
+        width: 400px;
+        height: 44px;
+        background:rgba(255,255,255,1)
+    }
+    .city-selector{
+
+        float: left;
+        position:relative;
+        width:28px;
+        line-height: 44px;
+        padding: 0 16px;
+        font-size: 14px;
+        background-repeat: no-repeat;
+
+    }
+    .Myicon{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        font-size: 1px;
+    }
+    .topbar-container{
+
+        float:left;
+        width: 340px;
+    }
+    .topbar-selector{
+        position:relative;
+        float:left;
+        padding: 0 16px 0 8px;
+        line-height: 44px;
+    }
+    .selector-value {
+        float:left;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .topbar-right{
+        float:right;
+    }
+    .sort-selector-helper{
+        float:left;
+        /*margin-right: 1px;*/
+    }
+    .mySearch{
+        width: 21px;
+        height: 21px;
+    }
+    .zonghepaixu{
+        margin-left: 80px;
+    }
+  /*  影院主体部分*/
+    .cinema-list {
+        padding: 10px 0;
+    }
+    .cinema-list .list-item{
+        position:relative;
+        width: 380px;
+        height:93px;
+        padding: 0 9px;
+        margin-bottom: 9px;
+        font-size: 12px;
+        line-height: 200%;
+
+    }
+    .cinema-list .list-item .list-item-container{
+        padding: 12px;
+        background:#fff;
+        border-radius: 6px;
+    }
+    .cinema-list .list-item .list-item-container .list-item-in{
+        display: block;
+    }
+    .cinema-list .list-item .list-title-warper{
+        margin-bottom: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        color:#2e333e;
+    }
+    .cinema-list .list-item .list-title-warper .list-title-left,.list-price{
+        float:left;
+    }
+    .cinema-list .list-item .list-title-warper .list-title-left{
+        margin-right: 50px;
+    }
+    .cinema-list .list-item .list-title-warper .list-price{
+        color:#ff4361;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .cinema-list .list-item .list-title-warper .list-price .word-qi{
+        color: #959aa5;
+        font-size: 11px;
+    }
+    .list-address {
+        position:relative;
+        line-height: 1.5;
+        height: 18px;
+        margin-right: 16px;
+    }
+    .list-distance,.list-location{
+        color: #5f6672;
+        font-size: 12px;
+    }
+    .list-address .list-distance{
+        position:absolute;
+        right: 0;
+        top: 0;
+        font-size: 12px;
+        /*color: #5f6672;*/
+    }
+    .cinema-support{
+        margin: 2px 0;
+        height: 18px;
+        line-height: 1.5;
+    }
+    .cinema-support .tpp-lbl{
+        float:left;
+
+        border: 1px solid rgba(49,169,245,0.4);
+        border-radius: 3px;
+        margin-right: 2px;
+        padding:0 3px;
+        color: #31a9f5;
+    }
+    .cinema-support .tpp-lbl:first-child{
+        color:#ff901c;
+        border: 1px solid rgba(255,144,28,.3);
+        border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <script src="../public/iconfont.js"></script>
+
+<!--顶部导航栏部分-->
+  <div class="topbar">
+<!--    城市下拉框-->
+    <div class="city-selector">
+      <div class="J_cityName">北京</div>
+      <i class="iconfont icon-xiala Myicon"></i>
+    </div>
+<!--    主体部分-->
+    <div class="topbar-container">
+      <div class="topbar-selector">
+        <div class="selector-value">全城</div>
+        <i class="iconfont icon-xiala Myicon"></i>
+      </div>
+      <div class="topbar-selector">
+        <div class="selector-value">筛选</div>
+        <i class="iconfont icon-xiala Myicon"></i>
+
+      </div>
+      <div class="topbar-selector zonghepaixu">
+<!--        帮助小图标-->
+        <div class="sort-selector-helper">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-xiguazi"></use>
+          </svg>
+        </div>
+        <div class="selector-value">综合排序</div>
+        <i class="iconfont icon-xiala Myicon"></i>
+
+      </div>
+      <div class="topbar-selector topbar-right">
+        <svg class="icon mySearch" aria-hidden="true">
+          <use xlink:href="#icon-a-12sousuo"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+<!--影院主体部分-->
+  <div class="cinema-list">
+    <ul class="cinema-list-ul">
+      <li class="list-item">
+        <div class="list-item-container">
+          <a href="" class="list-item-in clearfix">
+            <h3 class="list-title-warper clearfix">
+              <div class="list-title-left">
+                <span class="list-title">北京百老汇电影中心（万国城店）</span>
+              </div>
+              <div class="list-price">
+                新人                      ¥35
+                <span class="word-qi">起</span>
+              </div>
+
+            </h3>
+            <div class="list-address">
+              <span class="list-distance">--km</span>
+              <div class="list-location">东城区香河园路1号当代MOMA北区T4座</div>
+            </div>
+            <div class="cinema-support">
+              <div class="support-tags">
+                <div class="tpp-lbl">
+                  <span class="support-tagName">特惠票</span>
+                </div>
+                <div class="tpp-lbl">
+                  <span class="support-tagName">特惠票</span>
+                </div>
+                <div class="tpp-lbl">
+                  <span class="support-tagName">特惠票</span>
+                </div>
+                <div class="tpp-lbl">
+                  <span class="support-tagName">特惠票</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

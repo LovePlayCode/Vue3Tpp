@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Title</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    body{
+        background-color: #f5f6f8;
+    }
+    .tab-panel {
+        width: 400px;
+        padding: 0 12px;
+    }
+    .tab-panel .movie_list{
+        width: 374px;
+    }
+    .tab-panel .coming-show-time {
+        width:100%;
+        height: 33px;
+        padding: 6px 0;
+    }
+    .tab-panel .show-time-desc {
+        color: #959aa5;
+        font-size:12px;
+        line-height: 12px;
+        font-weight: 500;
+        margin-bottom: 3px;
+    }
+    .tab-panel .show-time-date{
+        color: #2e333e;
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 500;
+    }
+    .tab-panel .bui-moviecard{
+        padding:12px;
+        width:348px;
+        height:111px;
+        margin-bottom: 9px;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+  /*  显示电影内容区域*/
+    .bui-moviecard .bui-movie-item-main{
+        position: relative;
+        width: 348px;
+        height: 112px;
+    }
+    .bui-movie-card-poster{
+        float: left;
+        position: relative;
+        width:81px;
+        height:116px;
+    }
+    .bui-image img{
+        width:100%;
+        height:100%;
+    }
+    .bui-movie-card-poster .bui-tag{
+        position:absolute;
+        top: 0;
+        left:3px;
+        color:#fff;
+        background-color:rgba(0,0,0,.8);
+        font-weight: 400;
+        font-size: 10px;
+        border-radius:6px;
+    }
+    .bui-movie-card-poster .bui-icon-play-wrapper{
+        position:absolute;
+        bottom:5px;
+        left: 50px;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color:#fff;
+
+    }
+    .bui-icon-play-wrapper .bui-icon-play-wrapperIcon{
+        margin-left: 6px;
+    }
+    .bui-movie-card-content{
+        float:left;
+        width: 186px;
+        height: 93px;
+        padding: 0 12px;
+        font-size: 12px;
+        color: #5f6672;
+    }
+    .bui-movie-card-content .bui-movie-name-wrapper{
+        height: 19px;
+        margin-bottom:7px;
+    }
+    .bui-movie-card-content .bui-movie-name-wrapper span{
+        font-size: 16px;
+        line-height:1.2;
+        font-weight: 500;
+        color:#2e333e;
+    }
+    .bui-movie-card-content .bui-movie-desc {
+        width: 186px;
+        height: 16px;
+        margin-bottom: 7px;
+    }
+    .bui-movie-card-content .bui-movie-desc span:first-child{
+        color: #ff901c;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .bui-movie-card-content .bui-movie-desc span:nth-child(2){
+        font-size: 12px;
+        color: #5f6672;
+        font-weight: 400;
+    }
+    .bui-movie-card-content .bui-movie-desc span:nth-child(3){
+        color:  #e9ebef;
+        font-size: 12px;
+        background: none;
+        margin: 0 6px;
+    }
+    .bui-movie-card-content .bui-movie-desc span:last-child{
+        font-size: 12px;
+        font-weight: 400;
+        /*color: #5f6672;*/
+    }
+    .bui-movie-director{
+        height: 14px;
+        margin-bottom:6px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        /*color:#5f6672;*/
+    }
+  /*  购票区域*/
+    .bui-btn-wrapper{
+      position: absolute;
+        top:50%;
+        right:0;
+        /*left:0;*/
+        margin-top: -14px;
+
+        /*margin-top: 50%;*/
+        width:56px;
+        height:28px;
+    }
+    .bui-btn-wrapper .movie-card-btn{
+        height: 28px;
+        color: #fff;
+        font-weight: 400;
+        font-size:12px;
+        line-height:28px;
+        text-align:center;
+        background-image: linear-gradient(45deg,#23cafb,    #36aef9);
+        background-color: #f2f2f2;
+    /*  过度效果  */
+        transition: background-color .25s cubic-bezier(.4,0,.2,1) 0ms,opacity .25s cubic-bezier(.4,0,.2,1) 0ms,border-color .25s cubic-bezier(.4,0,.2,1) 0ms,color .25s cubic-bezier(.4,0,.2,1) 0ms;
+        border-radius:100px;
+    }
+  </style>
+</head>
+<body>
+<script src="../public/iconfont.js"></script>
+
+</body>
+</html>
